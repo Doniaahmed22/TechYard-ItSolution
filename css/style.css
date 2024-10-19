@@ -1,0 +1,688 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap'); */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body,
+html {
+    height: 100%;
+    overflow-x: hidden;
+    /* منع الـ scroll الأفقي */
+}
+
+html {
+    scroll-behavior: smooth;
+    /* تمكين التمرير السلس */
+}
+
+
+.logo {
+    background-color: black;
+    width: 40px;
+}
+
+.video-container {
+    position: fixed;
+    /* اجعله ثابت */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    /* خلف المحتوى */
+}
+
+.video-container video {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    /* font-family: "Lora", serif; */
+    color: white;
+}
+
+
+
+.contnt {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.word {
+    display: inline-block;
+    opacity: 0;
+    transition: opacity 1s ease;
+    font-size: 4rem;
+}
+
+.contnt h1 span {
+    font-size: 4rem;
+}
+
+.contnt h2 span {
+    font-size: 3rem;
+}
+
+
+.centered {
+    margin-top: 10px;
+}
+
+
+.outerPhone {
+    width: 100%;
+    /* display: flex;
+    justify-content: center; */
+    z-index: 1;
+    padding: 20px;
+    position: relative;
+}
+
+.phone {
+    width: 350px;
+    height: 450px;
+    position: relative;
+}
+
+img {
+    width: 100%;
+}
+
+
+.image {
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+.animate-image {
+    opacity: 1;
+    transform: translateY(0);
+    /* ترجع للصفر عند ظهورها */
+}
+
+
+.side {
+    width: 300px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.left {
+    transform: translateX(-70%);
+}
+
+.right {
+    transform: translateX(70%);
+}
+
+.top-left {
+    top: 80px;
+    left: -70%;
+}
+
+.bottom-left {
+    top: 320px;
+    left: -70%;
+    color: black;
+
+}
+
+.top-right {
+    top: 100px;
+    right: -70%;
+}
+
+.bottom-right {
+    top: 350px;
+    right: -70%;
+    color: black;
+}
+
+.outer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(255, 170, 139);
+    margin-left: 30px;
+}
+
+.outer2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(255, 170, 139);
+    margin-right: 30px;
+
+}
+
+.inner {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: orangered;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+
+}
+
+.Pstyle {
+    font-size: 18px;
+}
+
+.outer-container1 {
+
+    margin-right: 30px;
+}
+
+.outer-container2 {
+
+    margin-left: 30px;
+}
+
+
+.text {
+    color: #d6d6d6;
+    font-size: 12px;
+    padding-top: 2px;
+}
+
+.b {
+    color: rgb(49, 49, 49);
+}
+
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300px;
+}
+
+.ZoomIn {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImgZoomIn {
+    font-size: 4rem;
+    transition: transform 3s ease, opacity 2s ease;
+}
+
+.YardHub {
+    font-size: 4rem;
+    transition: transform 3s ease, opacity 2s ease;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.zoom-effect-YH {
+    transform: translate(374%, 350%) scale(5.3);
+    opacity: 0.2;
+    color: #979797;
+}
+
+
+
+.mov {
+    transition: transform 3s ease;
+
+}
+
+.moveUp {
+    transform: translateY(-160px);
+}
+
+.zoom-effect {
+    transform: translate(90%, 350%) scale(5.3);
+    opacity: 0.2;
+    color: #979797;
+}
+
+.move-right {
+    transform: translateX(1000px);
+    opacity: 1;
+}
+
+
+.TextLine {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 5px;
+}
+
+.TextLine::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: rgb(255, 0, 0);
+    transform: translateX(-100%);
+    transition: transform 1s ease;
+}
+
+.show-line .TextLine::after {
+    transform: translateX(0);
+}
+
+
+@keyframes drawLine {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+
+    }
+}
+
+*/ .ZoomIn p,
+span {
+    opacity: 0;
+}
+
+.word2 {
+    display: inline-block;
+    opacity: 0;
+    transition: transform 3s ease, opacity 1s ease, ;
+}
+
+
+
+.firstPhone {
+    width: 50%;
+    margin: auto;
+
+}
+
+
+.firstPhone img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.tmp {
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+}
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.flex p {
+    text-align: center;
+}
+
+
+.nav-link {
+    color: white;
+}
+
+.active {
+    color: rgb(229, 24, 24);
+}
+
+
+
+.container-fluid {
+    background-color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+
+    /* right: 0; */
+    top: 0;
+}
+
+
+
+.colHide {
+    color: #d6d6d6;
+}
+
+.flex p {
+    font-size: 20px;
+}
+
+/* .M-top-left{
+    background-color: aqua;
+    width: 70px;
+    position: relative;
+} */
+
+.outSquare {
+    display: none;
+}
+
+.tst {
+    display: none;
+}
+
+
+@media only screen and (max-width: 700px) {
+    .hide {
+        display: none;
+    }
+
+    .word {
+        font-size: 16px;
+        color: white;
+    }
+
+
+    .firstPhone {
+        height: 70vh;
+        width: 75%;
+    }
+
+    .firstPhone img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .flex p {
+        font-size: 16px;
+    }
+
+    .ImgZoomIn {
+        font-size: 2rem;
+    }
+
+    .YardHub {
+        font-size: 2rem;
+
+    }
+
+    .zoom-effect {
+        transform: translate(96%, 620%) scale(4);
+    }
+
+    .zoom-effect-YH {
+        transform: translate(270%, 620%) scale(4);
+    }
+
+    .image {
+        width: 69%;
+        margin: auto;
+    }
+
+
+
+
+    .outerPhone {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .phone {
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .container {
+        height: 200px;
+    }
+
+    .outerPhone {
+        height: 80vh;
+    }
+
+    .moveUp {
+        transform: translateY(-100px);
+    }
+
+
+    .cont {
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+
+    .side {
+        display: none;
+    }
+
+    /* .outSquare {
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background-color: rgb(238, 238, 238);
+
+    }
+
+    .outSquare p {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+    }
+
+    .M-topleft {
+        top: 74px;
+        left: 48px;
+    }
+
+    .M-topright {
+        top: 120px;
+        right: 55px;
+    }
+
+    .M-bottomleft {
+        bottom: 100px;
+        left: 48px;
+    }
+
+    .M-bottomright {
+        bottom: 74px;
+        right: 48px;
+    }
+ */
+
+
+
+
+
+    .outSquare {
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        background-color: rgb(238, 238, 238);
+        opacity: 0;
+        /* مخفية في البداية */
+        transform: scale(0.5);
+        /* أصغر في البداية */
+        transition: opacity 1s ease, transform 1s ease;
+    }
+
+    /* لإزالة أي هوامش إضافية داخل العناصر */
+    .outSquare p {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+    }
+
+    /* تحديد أماكن المربعات */
+    .M-topleft {
+        top: 74px;
+        left: 48px;
+        transform: translate(-50px, -50px) scale(0.5);
+        /* تبدأ من خارج الموقع */
+    }
+
+    .M-topright {
+        top: 120px;
+        right: 55px;
+        transform: translate(50px, -50px) scale(0.5);
+    }
+
+    .M-bottomleft {
+        bottom: 100px;
+        left: 48px;
+        transform: translate(-50px, 50px) scale(0.5);
+    }
+
+    .M-bottomright {
+        bottom: 74px;
+        right: 48px;
+        transform: translate(50px, 50px) scale(0.5);
+    }
+
+    /* عند تنشيط العنصر، يعود إلى موقعه الطبيعي مع تكبير */
+    .outSquare.show {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+
+
+
+
+
+
+
+
+    /* .tst {
+        display: block;
+        position: absolute;
+        top: 32%;
+        margin-top: 5px;
+    }
+
+    .tst p {
+        font-size: 16px;
+        color: black;
+        display: inline-block;
+    }
+
+
+    .tst span {
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: rgb(238, 238, 238);
+        padding: 5px;
+        font-weight: bold;
+        color: black;
+        display: inline-block;
+    }
+
+    .card {
+        padding: 5px;
+        margin-left: 2px;
+    } */
+
+
+
+
+
+    .tst {
+        display: block;
+        position: absolute;
+        top: 32%;
+        margin-top: 5px;
+    }
+    
+    /* تخفي العناصر في البداية */
+    .tst p {
+        font-size: 16px;
+        color: black;
+        display: inline-block;
+        opacity: 0; /* مخفية */
+        transform: translateX(-50px); /* تبدأ من اليسار */
+        transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    /* النمط الخاص بالأرقام */
+    .tst span {
+        font-size: 16px;
+        border-radius: 5px;
+        background-color: rgb(238, 238, 238);
+        padding: 5px;
+        font-weight: bold;
+        color: black;
+        display: inline-block;
+    }
+    
+    /* تباعد بين الفقرات */
+    .card {
+        padding: 5px;
+        margin-left: 2px;
+    }
+    
+    /* عند التفعيل، تعود إلى موقعها الطبيعي وتظهر */
+    .tst p.show {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
